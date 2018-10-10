@@ -1,0 +1,34 @@
+1.Hoisting works with only Function declaration and not Function expression.
+2.Event Bubbling vs Event Capturing
+    Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. The event propagation mode determines in which order the elements receive the event.
+    With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+    With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+    Capturing is also called "trickling", which helps remember the propagation order:
+    trickle down, bubble up
+
+    Back in the old days, Netscape advocated event capturing, while Microsoft promoted event bubbling. Both are part of the W3C Document Object Model Events standard (2000).
+
+
+    function log(msg) {
+        logElement.innerHTML += ('<p>' + msg + '</p>');
+    }
+
+    function capture() {
+        log('capture: ' + this.firstChild.nodeValue.trim());
+    }
+
+    function bubble() {
+        log('bubble: ' + this.firstChild.nodeValue.trim());
+    }
+
+    var divs = document.getElementsByTagName('div');
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].addEventListener('click', capture, true);
+        divs[i].addEventListener('click', bubble, false);
+    }
+ 
+
+
+ 3.Use case of IIFE in JS (https://blog.mariusschulz.com/2016/01/19/use-cases-for-javascripts-iifes)
+
+ 4. call,apply and bind 
