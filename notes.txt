@@ -34,4 +34,8 @@
  4. call,apply and bind
  5. JavaScript does not give scoping for block.It only gives scoping for the functions.So anything defined inside the block in global scope is available throughout the programs.Even though it has changed with ES6 where you can define block scoping using the "let" keyword.
  6. reduce is helpful in JS if we want to take an array and reduce it into a single value.
- 7. Methods to be defin on object should be defined on prototype property rather than defining it in object declaration because it creates performance overhead.
+ 7. Methods to be defined on object should be defined on prototype property rather than defining it in object declaration because it creates performance overhead.
+ 8. State that is often changed should be managed by the isolated component rather than being passed on by the parent component
+    because it will lead to rendering of parent component a lot which will lead to performance overhead.
+ 9. debounce in lodash helps us in specifying how often a function is called.So it can help in like deciding
+    how often a function should be called when entering input into text field like for validations.
