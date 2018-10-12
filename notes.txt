@@ -31,4 +31,7 @@
 
  3.Use case of IIFE in JS (https://blog.mariusschulz.com/2016/01/19/use-cases-for-javascripts-iifes)
 
- 4. call,apply and bind 
+ 4. call,apply and bind
+ 5. JavaScript does not give scoping for block.It only gives scoping for the functions.So anything defined inside the block in global scope is available throughout the programs.Even though it has changed with ES6 where you can define block scoping using the "let" keyword.
+ 6. reduce is helpful in JS if we want to take an array and reduce it into a single value.
+ 7. Methods to be defin on object should be defined on prototype property rather than defining it in object declaration because it creates performance overhead.
